@@ -21,6 +21,7 @@
         position: relative;
         width: 95%;
         margin: 0 auto;
+        left: 0; /* ensure visible */
     }
     .insider .clothesGallery{
         position: relative;
@@ -40,7 +41,7 @@
 @media (max-width: 1015px) {
     .insider{
         position: relative;
-        left: -95%;
+        left: 0; /* changed from -95% so content remains visible */
         top: 20%;
     }
 }
@@ -143,7 +144,7 @@
     
     .insider {
         position: relative;
-        left: 0;
+        left: 0; /* ensure visible */
         width: 95%;
         margin: 0 auto;
         top: 0;
@@ -161,7 +162,7 @@
 @media (max-width: 572px) {
     .insider{
         position: relative;
-        left: -95%;
+        left: 0; /* changed from -95% */
         top: 20%;
     }
 }
@@ -251,7 +252,7 @@
 @media (max-width: 364px) {
     .insider{
         position: relative;
-        left: -98%;
+        left: 0; /* changed from -98% */
         top: 20%;
     }
     .insider img{
@@ -278,7 +279,7 @@
 @media (max-width: 212px) {
     .insider{
         position: relative;
-        left: -95%;
+        left: 0; /* changed from -95% */
         top: 20%;
     }
     .insider img{
@@ -342,7 +343,7 @@
                 <h3>Events & Other attire:</h3>
                 <div class="clothesGallery">
                     <img src="images/children/Beautiful kids African Ankara clothing, children's Ankara dress, children's birthday outfit, African print kids dress, baby shower gift_.jpg" alt="">
-                    <img src="" alt="">
+                    <!-- removed empty <img src=""> that caused a network/console error -->
                 </div>
             </div>
         </div>
