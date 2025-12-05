@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfits</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+/* IMAGESLIDE KEYFRAMES */
+@keyframes slideScroll {
+    from { transform: translateY(0%); }
+    to { transform: translateY(-300%); }
+}
+
+/* RESPONSIVE DESIGN FOR OUTFITS PAGE */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+    
+    .leftSide {
+        position: fixed;
+        width: 280px;
+        height: 100vh;
+        left: -280px; /* Hidden by default */
+        top: 0;
+        background-color: rgb(243, 228, 206);
+        transition: left 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+        box-shadow: 4px 0 12px rgba(0,0,0,0.3);
+    }
+    
+    .leftSide.active {
+        left: 0; /* Slide in when active */
+    }
+    
+    .rightSide {
+        position: relative;
+        width: 100%;
+        right: 0;
+        margin-left: 0;
+    }
+    
+    header {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        padding: 20px 10px;
+    }
+    
+    header img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        height: 100px;
+        width: 100px;
+    }
+    
+    header h2 {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .navBarOutfits {
+        position: relative;
+        width: 100%;
+        right: 0;
+        top: 0;
+        margin-top: 60px; /* Space for burger button */
+    }
+    
+    .navBarOutfits ul {
+        flex-wrap: wrap;
+        padding: 0 5px;
+    }
+    
+    .navBarOutfits li {
+        padding: 10px 5px;
+        font-size: 13px;
+        min-width: 80px;
+    }
+    
+    .showOptions {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .showOptions ul {
+        padding: 0;
+    }
+    
+    .showOptions li {
+        padding: 18px;
+        font-size: 15px;
+    }
+    
+    .container {
+        position: relative;
+        top: 50px;
+        width: 95%;
+        margin: 0 auto;
+        height: 600px;
+        overflow: visible;
+    }
+    
+    .inside {
+        width: 96%;
+        height: 500px;
+        margin: 100px auto 0 auto;
+        overflow: hidden;
+        position: relative;
+        left: -95%;
+    }
+    
+    .inside .imageGallery {
+        position: relative;
+        z-index: 1;
+        width: 1300px;
+        left: -90%;
+        top: -180px;
+        height: max-content;
+        transform: rotate(30deg);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.6em;
+    }
+    
+    .imageGallery img {
+        width: 180px;
+        height: 220px;
+        animation: slideScroll 20s linear infinite;
+    }
+    
+    .insider {
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    footer {
+        width: 95%;
+        margin: 2rem auto 1rem auto;
+    }
+}
+
+/* Mobile screens (480px and below) */
+@media (max-width: 480px) {
+    .burger-menu {
+        width: 40px;
+        height: 40px;
+        top: 12px;
+        left: 12px;
+    }
+    
+    .burger-menu span {
+        width: 22px;
+        height: 2.5px;
+    }
+    
+    .leftSide {
+        width: 250px;
+        left: -250px;
+    }
+    
+    header img {
+        height: 80px;
+        width: 80px;
+    }
+    
+    header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .navBarOutfits {
+        margin-top: 55px;
+    }
+    .navBarOutfits ul {
+        padding: 0 3px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .navBarOutfits li {
+        padding: 8px 3px;
+        font-size: 11px;
+        min-width: 70px;
+    }
+    
+    .showOptions li {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .container {
+        width: 98%;
+        height: 450px;
+        overflow: visible;
+    }
+    
+    .container p {
+        font-size: 13px;
+        padding: 0 8px;
+    }
+    
+    .inside {
+        position: relative;
+        left: -100%;
+        width: 95%;
+        height: 400px;
+        overflow: hidden;
+    }
+    
+    .inside .imageGallery {
+        width: 1000px;
+        left: -90%;
+        top: -140px;
+        gap: 0.5em;
+    }
+    
+    .imageGallery img {
+        width: 145px;
+        height: 185px;
+    }
+    
+    .insider .clothesGallery {
+        width: 100%;
+        gap: 0.4em;
+    }
+    
+    .insider img {
+        width: calc(50% - 8px);
+        height: auto;
+        min-height: 180px;
+    }
+    
+    footer {
+        padding: 1rem 0.8rem;
+        z-index: 10;
+    }
+    
+    footer h2 {
+        font-size: 1rem;
+    }
+    
+    footer li {
+        font-size: 0.9rem;
+    }
+    #backToTop{ z-index: 1000;}
+}
+@media (max-width: 350px) {
+    .inside{
+        position: relative;
+        width: 93%;
+    }
+    .inside .imageGallery {
+        left: -150%;
+        top: -140px;
+        gap: 0.5em;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .overlay {
+        display: none !important;
+    }
+}
+/* Overlay for sidebar */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+    </style>
+</head>
+<body>
+    <button class="burger-menu" id="burgerMenu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="leftSide">
+        <header>
+            <img src="images/PREMIUM NONSLIP SUIT HANGER.jpg" alt="">
+            <h2>Outfits</h2>
+        </header>
+
+        <div class="showOptions">
+            <ul>
+                <a href="uniforms.html"><li>Uniforms</li></a>
+                <a href="mensWare.html"><li>Men's Ware</li></a>
+                <a href="womensWare.html"><li>Women's Ware</li></a>
+                <a href="childrenWare.html"><li>Children's Ware</li></a>
+                <a href="churchWare.html"><li>Church Ware</li></a>
+                <a href="sportsWare.html"><li>Sports Ware</li></a>
+                <a href="eventWare.html"><li>Event Ware</li></a>
+                <a href="accessories.html"><li>Accessories</li></a>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="rightSide">
+        <div class="navBarOutfits">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="outfits.html">Outfits</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="otherServices.html">Other Services</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <p>At <b>Charngo Fashion House</b>, we value <i>quality</i> and <i>decency</i>
+                We would love to add you to the family by making you happy and 
+                comfortable in our outfits. Browse through our gallery below to see 
+                what best suits your style and needs.
+            </p>
+        
+
+
+        <div class="inside">
+            <div class="imageGallery">
+                <img src="images/men/ee7a87b78e4b4a148bb78927281d1ca3.jpg" alt="">
+                <img src="images/women/6bc92248-7ca2-4063-9cc3-5cfde0f65e6f.jpg" alt="">
+                <img src="images/church/Choir robe (896×1430).jpg" alt="">
+                <img src="images/children/Beautiful kids African Ankara clothing, children's Ankara dress, children's birthday outfit, African print kids dress, baby shower gift_.jpg" alt="">
+                <img src="images/accessories/Mens Pre-tied Bowtie And Pocket Square Set Paisley_striped_checks Bowties For___.jpg" alt="">
+                <img src="images/women/African Ankara dress, Ankara wedding dress,  African thanksgiving and engagement dress, African womens dresses,  African prom dresses_.jpg" alt="">
+                <img src="images/men/d9a9e69a1ad0181675d2b83bc7d1859e.jpg" alt="">
+                <img src="images/children/Eco-Friendly School Uniform Solutions.jpg" alt="">
+                <img src="images/women/حجز مسبق  Sizes ( 36 ,38,40,42،44)  السعر_160 الف….jpg" alt="">
+                <img src="images/women/Dresses For Women _ Fashion Dress Online.jpg" alt="">
+                <img src="images/uniforms/Aprons For Women And Men, Kitchen Chef Apron With 3 Pockets And 1 Pcs Black1.jpg" alt="">
+                <img src="images/uniforms/Orbit International Classic Tunic_ Ladies - Bottle.jpg" alt="">
+                <img src="images/men/ee7a87b78e4b4a148bb78927281d1ca3.jpg" alt="">
+                <img src="images/women/6bc92248-7ca2-4063-9cc3-5cfde0f65e6f.jpg" alt="">
+                <img src="images/church/Choir robe (896×1430).jpg" alt="">
+                <img src="images/children/Beautiful kids African Ankara clothing, children's Ankara dress, children's birthday outfit, African print kids dress, baby shower gift_.jpg" alt="">
+                <img src="images/accessories/Mens Pre-tied Bowtie And Pocket Square Set Paisley_striped_checks Bowties For___.jpg" alt="">
+                <img src="images/women/African Ankara dress, Ankara wedding dress,  African thanksgiving and engagement dress, African womens dresses,  African prom dresses_.jpg" alt="">
+                <img src="images/men/d9a9e69a1ad0181675d2b83bc7d1859e.jpg" alt="">
+                <img src="images/children/Eco-Friendly School Uniform Solutions.jpg" alt="">
+                <img src="images/women/حجز مسبق  Sizes ( 36 ,38,40,42،44)  السعر_160 الف….jpg" alt="">
+                <img src="images/women/Dresses For Women _ Fashion Dress Online.jpg" alt="">
+                <img src="images/uniforms/Aprons For Women And Men, Kitchen Chef Apron With 3 Pockets And 1 Pcs Black1.jpg" alt="">
+                <img src="images/uniforms/Orbit International Classic Tunic_ Ladies - Bottle.jpg" alt="">
+                <img src="images/men/ee7a87b78e4b4a148bb78927281d1ca3.jpg" alt="">
+                <img src="images/women/6bc92248-7ca2-4063-9cc3-5cfde0f65e6f.jpg" alt="">
+                <img src="images/church/Choir robe (896×1430).jpg" alt="">
+                <img src="images/children/Beautiful kids African Ankara clothing, children's Ankara dress, children's birthday outfit, African print kids dress, baby shower gift_.jpg" alt="">
+                <img src="images/accessories/Mens Pre-tied Bowtie And Pocket Square Set Paisley_striped_checks Bowties For___.jpg" alt="">
+                <img src="images/women/African Ankara dress, Ankara wedding dress,  African thanksgiving and engagement dress, African womens dresses,  African prom dresses_.jpg" alt="">
+                <img src="images/men/d9a9e69a1ad0181675d2b83bc7d1859e.jpg" alt="">
+                <img src="images/children/Eco-Friendly School Uniform Solutions.jpg" alt="">
+                <img src="images/women/حجز مسبق  Sizes ( 36 ,38,40,42،44)  السعر_160 الف….jpg" alt="">
+                <img src="images/women/Dresses For Women _ Fashion Dress Online.jpg" alt="">
+                <img src="images/uniforms/Aprons For Women And Men, Kitchen Chef Apron With 3 Pockets And 1 Pcs Black1.jpg" alt="">
+                <img src="images/uniforms/Orbit International Classic Tunic_ Ladies - Bottle.jpg" alt="">
+                <img src="images/men/ee7a87b78e4b4a148bb78927281d1ca3.jpg" alt="">
+                <img src="images/women/6bc92248-7ca2-4063-9cc3-5cfde0f65e6f.jpg" alt="">
+                <img src="images/church/Choir robe (896×1430).jpg" alt="">
+                <img src="images/children/Beautiful kids African Ankara clothing, children's Ankara dress, children's birthday outfit, African print kids dress, baby shower gift_.jpg" alt="">
+                <img src="images/accessories/Mens Pre-tied Bowtie And Pocket Square Set Paisley_striped_checks Bowties For___.jpg" alt="">
+                <img src="images/women/African Ankara dress, Ankara wedding dress,  African thanksgiving and engagement dress, African womens dresses,  African prom dresses_.jpg" alt="">
+                <img src="images/men/d9a9e69a1ad0181675d2b83bc7d1859e.jpg" alt="">
+                <img src="images/children/Eco-Friendly School Uniform Solutions.jpg" alt="">
+                <img src="images/women/حجز مسبق  Sizes ( 36 ,38,40,42،44)  السعر_160 الف….jpg" alt="">
+                <img src="images/women/Dresses For Women _ Fashion Dress Online.jpg" alt="">
+                <img src="images/uniforms/Aprons For Women And Men, Kitchen Chef Apron With 3 Pockets And 1 Pcs Black1.jpg" alt="">
+                <img src="images/uniforms/Orbit International Classic Tunic_ Ladies - Bottle.jpg" alt="">
+        </div>
+        </div>
+        
+            
+        </div><br><br>
+        
+        </br>
+        <!-- <span>&#9776;</span> -->
+
+        <footer>
+            <h2>Contact Us:</h2>
+            <li class="call">&nbsp;<b>Phone:</b> <span>&#9742;</span> <br> &nbsp;&nbsp;0720 587 958 <br> &nbsp;&nbsp;0738 459 045 </li>
+            <li class="whatsapp">&nbsp;<b>WhatsApp:</b> <span>&#128241;</span> <br> &nbsp;&nbsp;+2547 20 587 958</li>
+            <li class="email">&nbsp;<b>Email:</b> <span>&#128231;</span> <br> &nbsp;&nbsp;charngo.co@gmail.com</li>
+        </footer>
+    </div>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button style= "z-index: 2001">
+
+    <script src="script.js"></script>
+</body>
+</html>

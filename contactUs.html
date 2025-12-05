@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* RESPONSIVE CONTACT PAGE  */
+        @media (max-width: 1100px) {
+            .logo{ position:absolute;  width: 170px; height: 170px;}
+            .navBar ul{flex: none;}
+            .navBar ul{ gap: 6px; padding: 0 8px; display: flex; flex-wrap: wrap; flex-direction: row;}
+        }
+        @media (max-width: 900px) {
+            .navBar ul{ gap: 6px; padding: 0 8px; display: flex; flex-wrap: wrap; flex-direction: row;}
+        }
+        @media (max-width: 600px) {
+            .reach{position: relative; top: -350px; left: 230px;}
+        }
+        @media (max-width: 470px) {
+            .reach{position: relative; top: 0px; left: 70px;}
+            footer{height: 800px;}
+            .navBar ul{ gap: 6px; padding: 0 8px; display: flex; flex-wrap: wrap; flex-direction: column;}
+        }
+        @media (max-width: 420px) {
+            .reach{position: relative; top: 50px; left: 25px;}
+            .navBar ul{ gap: 6px; padding: 0 8px; display: flex; flex-wrap: wrap; flex-direction: column; font-size: 12px;}
+        }
+        @media (max-width:245px) {
+            .reach{align-items: center;position: relative; top: 0px; left: 70px;}
+            .reach h5{font-size: 0.6rem; align-items: center; left: -80px; position: relative;}
+            .reach img{width: 80px; height: 80px; align-items: center; position: relative; left: -20px;}
+        }
+        .backToTop{z-index: 1;}
+    </style>
+</head>
+<body>
+    <div class="navBar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="outfits.html">Outfits</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="otherServices.html">Other Services</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <!-- <img src="images/WhatsApp Image 2025-11-28 at 12.37.31_823b162c.jpg" alt="" class="logo"> -->
+
+    <footer>
+        <h2>Contact Us:</h2>
+        <li class="call">&nbsp;<b>Phone:</b> <span>&#9742;</span> <br> &nbsp;&nbsp;0720 587 958 <br> &nbsp;&nbsp;0738 459 045 </li>
+        <li class="whatsapp">&nbsp;<b>WhatsApp:</b> <span>&#128241;</span> <br> &nbsp;&nbsp;+2547 20 587 958</li>
+        <li class="email">&nbsp;<b>Email:</b> <span>&#128231;</span> <br> &nbsp;&nbsp;charngo.co@gmail.com</li>
+        <br>
+        <h2>Social Media:</h2>
+        <li class="facebook">&nbsp;<b>Facebook:</b> <i class="fab fa-facebook"></i> <br> &nbsp;&nbsp;<a href="https://www.facebook.com/obiero.charles.494299">Obiero Charles</a></li>
+        <li class="instagram">&nbsp;<b>Instargam:</b><i class="fab fa-instagram"></i> <br> &nbsp;&nbsp;<a href=https://www.instagram.com/charngo.co>charngo.co</a><br>&nbsp;&nbsp;<a href="https://www.instagram.com/obie.rocharles/">obie.rocharles</a></li>
+
+        <div class="reach">
+            <h5>For more unique designs, style recommendaions and material selection, contact our designer.</h5>
+            <img src="images/IMG_20231230_102348_297.jpg" alt="">
+            <h5>Charles Obiero</h5>
+        </div>
+    </footer>
+
+    <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

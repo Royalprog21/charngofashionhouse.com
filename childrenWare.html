@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children Ware</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* RESPONSIVE DESIGN */
+@media (max-width: 1100px) {
+    .container{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .container p{
+        position: inherit;
+        width: 95%;
+    }
+    .insider{
+        position: relative;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .insider .clothesGallery{
+        position: relative;
+        width: 100%;
+    }
+    .insider .clothesGallery img{
+        width: 200px;
+        height: 240px;
+    }
+    header img{
+        scale: 0.9;
+    }
+    header h2{
+        scale: 0.6;
+    }
+}
+@media (max-width: 1015px) {
+    .insider{
+        position: relative;
+        left: -95%;
+        top: 20%;
+    }
+}
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+    
+    .leftSide {
+        position: fixed;
+        width: 280px;
+        height: 100vh;
+        left: -280px;
+        top: 0;
+        background-color: rgb(243, 228, 206);
+        transition: left 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+        box-shadow: 4px 0 12px rgba(0,0,0,0.3);
+    }
+    
+    .leftSide.active {
+        left: 0;
+    }
+    
+    .rightSide {
+        position: relative;
+        width: 100%;
+        right: 0;
+        margin-left: 0;
+    }
+    
+    header {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        padding: 20px 10px;
+    }
+    
+    header img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        height: 100px;
+        width: 100px;
+    }
+    
+    header h2 {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .navBarOutfits {
+        position: relative;
+        width: 100%;
+        right: 0;
+        top: 0;
+        margin-top: 60px;
+    }
+    
+    .navBarOutfits ul {
+        flex-wrap: wrap;
+        padding: 0 5px;
+    }
+    
+    .navBarOutfits li {
+        padding: 10px 5px;
+        font-size: 13px;
+        min-width: 80px;
+    }
+    
+    .showOptions {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .showOptions ul {
+        padding: 0;
+    }
+    
+    .showOptions li {
+        padding: 18px;
+        font-size: 15px;
+    }
+    
+    .container {
+        width: 95%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+    
+    .insider {
+        position: relative;
+        left: 0;
+        width: 95%;
+        margin: 0 auto;
+        top: 0;
+    }
+    .insider .clothesGallery img{
+        width: 160px;
+        height: 200px;
+    }
+    
+    footer {
+        width: 95%;
+        margin: 2rem auto 1rem auto;
+    }
+}
+@media (max-width: 572px) {
+    .insider{
+        position: relative;
+        left: -95%;
+        top: 20%;
+    }
+}
+@media (max-width: 480px) {
+    .burger-menu {
+        width: 40px;
+        height: 40px;
+        top: 12px;
+        left: 12px;
+    }
+    
+    .burger-menu span {
+        width: 22px;
+        height: 2.5px;
+    }
+    
+    .leftSide {
+        width: 250px;
+        left: -250px;
+    }
+    
+    header img {
+        height: 80px;
+        width: 80px;
+    }
+    
+    header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .navBarOutfits {
+        margin-top: 55px;
+    }
+    .navBarOutfits ul{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .navBarOutfits li {
+        padding: 8px 3px;
+        font-size: 11px;
+        min-width: 70px;
+    }
+    
+    .showOptions li {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .container {
+        width: 98%;
+    }
+    
+    .container p {
+        font-size: 13px;
+        padding: 0 8px;
+    }
+    .insider{
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+    .insider .clothesGallery {
+        width: 100%;
+        gap: 0.4em;
+    }
+    
+    .insider img {
+        width: 180px;
+        height: 220px;
+        min-height: 130px;
+    }
+    
+    footer {
+        padding: 1rem 0.8rem;
+    }
+    
+    footer h2 {
+        font-size: 1rem;
+    }
+    
+    footer li {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 364px) {
+    .insider{
+        position: relative;
+        left: -98%;
+        top: 20%;
+    }
+    .insider img{
+        width: 80px;
+        height: 100px;
+    }
+}
+@media (max-width: 281px) {
+    .insider{
+        position: relative;
+        top: 0;
+        width: 100%;
+        left: 0%;
+    }
+    .insider .clothesGallery {
+        width: 100%;
+        gap: 0.4em;
+    }
+    .insider .clothesGallery img{
+        width: 60px;
+        height: 80px;
+    }
+}
+@media (max-width: 212px) {
+    .insider{
+        position: relative;
+        left: -95%;
+        top: 20%;
+    }
+    .insider img{
+        width: 80px;
+    }
+}
+
+@media (min-width: 769px) {
+    .overlay {
+        display: none !important;
+    }
+}
+    </style>
+</head>
+<body>
+    <button class="burger-menu" id="burgerMenu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="leftSide">
+        <header>
+            <img src="images/children/Beautiful kids African Ankara clothing, children's Ankara dress, children's birthday outfit, African print kids dress, baby shower gift_.jpg" alt="">
+            <h2>Children Ware</h2>
+        </header>
+
+        <div class="showOptions">
+            <ul>
+                <a href="uniforms.html"><li>Uniforms</li></a>
+                <a href="mensWare.html"><li>Men's Ware</li></a>
+                <a href="womensWare.html"><li>Women's Ware</li></a>
+                <a href="childrenWare.html"><li>Children's Ware</li></a>
+                <a href="churchWare.html"><li>Church Ware</li></a>
+                <a href="sportsWare.html"><li>Sports Ware</li></a>
+                <a href="eventWare.html"><li>Event Ware</li></a>
+                <a href="accessories.html"><li>Accessories</li></a>
+            </ul>
+        </div>
+    </div>
+    <div class="rightSide">
+        <div class="navBarOutfits">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="outfits.html">Outfits</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="otherServices.html">Other Services</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <p>Children love neat and beautiful designs, at <b>Charngo Fashion House, </b>we got you covered.<br><br>
+                For more kids clothes, contact the designer, we can replicate an adult size design to fit your child.</p>
+            <div class="insider">
+                <h3>Uniforms:</h3>
+                <div class="clothesGallery">
+                    <img src="images/children/child uniform.jpg" alt="">
+                    <img src="images/children/Eco-Friendly School Uniform Solutions.jpg" alt="">
+                    <img src="images/uniforms/V-front jumper.jpg" alt="">
+                </div>
+                <h3>Events & Other attire:</h3>
+                <div class="clothesGallery">
+                    <img src="images/children/Beautiful kids African Ankara clothing, children's Ankara dress, children's birthday outfit, African print kids dress, baby shower gift_.jpg" alt="">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

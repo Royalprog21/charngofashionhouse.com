@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Ware</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* RESPONSIVE DESIGN */
+@media (max-width: 1100px) {
+    .container{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .container p{
+        position: inherit;
+        width: 95%;
+    }
+    .insider{
+        position: relative;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .insider .clothesGallery{
+        position: relative;
+        width: 100%;
+    }
+    .insider .clothesGallery img{
+        width: 200px;
+        height: 240px;
+    }
+    header img{
+        scale: 0.9;
+    }
+    header h2{
+        scale: 0.6;
+    }
+}
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+    
+    .leftSide {
+        position: fixed;
+        width: 280px;
+        height: 100vh;
+        left: -280px;
+        top: 0;
+        background-color: rgb(243, 228, 206);
+        transition: left 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+        box-shadow: 4px 0 12px rgba(0,0,0,0.3);
+    }
+    
+    .leftSide.active {
+        left: 0;
+    }
+    
+    .rightSide {
+        position: relative;
+        width: 100%;
+        right: 0;
+        margin-left: 0;
+    }
+    
+    header {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        padding: 20px 10px;
+    }
+    
+    header img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        height: 100px;
+        width: 100px;
+    }
+    
+    header h2 {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .navBarOutfits {
+        position: relative;
+        width: 100%;
+        right: 0;
+        top: 0;
+        margin-top: 60px;
+    }
+    
+    .navBarOutfits ul {
+        flex-wrap: wrap;
+        padding: 0 5px;
+    }
+    
+    .navBarOutfits li {
+        padding: 10px 5px;
+        font-size: 13px;
+        min-width: 80px;
+    }
+    
+    .showOptions {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .showOptions ul {
+        padding: 0;
+    }
+    
+    .showOptions li {
+        padding: 18px;
+        font-size: 15px;
+    }
+    
+    .container {
+        width: 95%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+    
+    .insider {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .insider .clothesGallery img{
+        width: 160px;
+        height: 200px;
+    }
+    
+    footer {
+        width: 95%;
+        margin: 2rem auto 1rem auto;
+    }
+}
+@media (max-width:520px) {
+    .insider{
+        position: relative;
+        left: -95%;
+        top: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+    .burger-menu {
+        width: 40px;
+        height: 40px;
+        top: 12px;
+        left: 12px;
+    }
+    
+    .burger-menu span {
+        width: 22px;
+        height: 2.5px;
+    }
+    
+    .leftSide {
+        width: 250px;
+        left: -250px;
+    }
+    
+    header img {
+        height: 80px;
+        width: 80px;
+    }
+    
+    header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .navBarOutfits {
+        margin-top: 55px;
+    }
+    .navBarOutfits ul{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .navBarOutfits li {
+        padding: 8px 3px;
+        font-size: 11px;
+        min-width: 70px;
+    }
+    
+    .showOptions li {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .container {
+        width: 98%;
+    }
+    
+    .container p {
+        font-size: 13px;
+        padding: 0 8px;
+    }
+     .insider{
+        position: relative;
+        left: 0%;
+        top: 0%;
+    }
+    
+    .insider .clothesGallery {
+        width: 100%;
+        gap: 0.4em;
+    }
+    
+    .insider img {
+        width: calc(50% - 8px);
+        height: auto;
+        min-height: 130px;
+    }
+    
+    footer {
+        padding: 1rem 0.8rem;
+    }
+    
+    footer h2 {
+        font-size: 1rem;
+    }
+    
+    footer li {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 350px) {
+     .insider{
+        position: relative;
+        left: -95%;
+        top: 20%;
+    }
+}
+@media (max-width: 281px) {
+    .insider{
+        position: relative;
+        top: 20%;
+        width: 100%;
+        left: -100%;
+    }
+    .insider .clothesGallery {
+        width: 100%;
+        gap: 0.4em;
+    }
+    .insider .clothesGallery img{
+        width: 60px;
+        height: 80px;
+    }
+}
+
+@media (min-width: 769px) {
+    .overlay {
+        display: none !important;
+    }
+}
+    </style>
+</head>
+<body>
+    <button class="burger-menu" id="burgerMenu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="leftSide">
+        <header>
+            <img src="images/women/Dresses For Women _ Fashion Dress Online.jpg" alt="">
+            <h2>Women's Ware</h2>
+        </header>
+
+        <div class="showOptions">
+            <ul>
+                <a href="uniforms.html"><li>Uniforms</li></a>
+                <a href="mensWare.html"><li>Men's Ware</li></a>
+                <a href="womensWare.html"><li>Women's Ware</li></a>
+                <a href="childrenWare.html"><li>Children's Ware</li></a>
+                <a href="churchWare.html"><li>Church Ware</li></a>
+                <a href="sportsWare.html"><li>Sports Ware</li></a>
+                <a href="eventWare.html"><li>Event Ware</li></a>
+                <a href="accessories.html"><li>Accessories</li></a>
+            </ul>
+        </div>
+    </div>
+    <div class="rightSide">
+        <div class="navBarOutfits">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="outfits.html">Outfits</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="otherServices.html">Other Services</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <p>At <b>Charngo Fashion House,</b> we focus on <i>elegance</i> and <i>class</i> while mainatainig decency. Our womens wordrobe speaks for itself with amazing
+                designs, with testimonials from all classes and sectors in the job market. Check out out designs below👇
+            </p>
+            <div class="insider">
+                <h3>Pant suits & skirt suits:</h3>
+                <div class="clothesGallery">
+                    <img src="images/women/حجز مسبق  Sizes ( 36 ,38,40,42،44)  السعر_160 الف….jpg" alt="">
+                    <img src="images/women/Jumpsuits For Women _ Fashion Rompers Online.jpg" alt="">
+                    <img src="images/women/6bc92248-7ca2-4063-9cc3-5cfde0f65e6f.jpg" alt="">
+                    <img src="images/women/9e5deb9c1e3e479fab111ed48f8d7e02.jpg" alt="">
+                    <img src="images/women/9d15b870e53d97a220414ad19c2179c8.jpg" alt="">
+                    <img src="images/women/095c0698-0e7c-47ec-9742-0b3c6a797e09.jpg" alt="">
+                    <img src="images/women/4eb30890ce522c7c23a833a7a4471050.jpg" alt="">
+                    <img src ="images/women/طقم فاخر عالي الجودة مكون من 3 قطع لموسم الخريف….jpg" alt="">
+                
+                </div>
+                <h3>African attire:</h3>
+                <div class="clothesGallery">
+                    <img src="images/women/African Ankara dress, Ankara wedding dress,  African thanksgiving and engagement dress, African womens dresses,  African prom dresses_.jpg" alt="">
+                    <img src="images/women/African print long jacket styled with brown pants….jpg" alt="">
+                    <img src="images/women/African Traditional Dresses for Women Plus Size Dashiki Print Clothes Ankara Dress.jpg" alt="">
+                    <img src="images/women/Bazin Rich African High Low dress in XS to 6X - 24FS1545 _ XXL.jpg" alt="">
+                    <img src="images/women/Couples African Outfit, Ankara Couples Matching Clothes, African Wedding Outfit, African Men Shirt, African Print Dress, Ankara Maxi Dress - Etsy.jpg" alt="">
+                    <img src="images/women/Dresses For Women _ Fashion Dress Online.jpg" alt="">
+                    <img src="images/women/African.jpg" alt="">
+                    <img src="images/women/Robe midi imprimée africaine Robe imprimée africaine Ankara robevêtements pour femmes Robe africainerobe midi Robe midi Ankara Robe africaine pour femme - Etsy France.jpg" alt="">
+                    <img src="images/women/Zara Sleeveless Fit & Flare Ankara Maxi Party Dress.jpg" alt="">
+                </div>
+                <h3>Skirts, dresses & trousers:</h3>
+                <div class="clothesGallery">
+                    <img src="images/women/a1b0521f-d3ad-46ec-a089-48cd36e579bb.jpg" alt="">
+                    <img src="images/women/Belle Poque Women Plaid Skirt Vintage High Waist Pleated Skirt with Pockets BPA020.jpg" alt="">
+                    <img src="images/women/Belle Poque Women's Vintage Stretch High Waist A-Line Flared Midi Skirts with Pockets & Belts.jpg" alt="">
+                    <img src="images/women/dcaba1ce-2320-4ccb-954a-c7cfca617202.jpg" alt="">
+                    <img src="images/women/Robe longue rétro à pois pour femmes, manches évasées, taille haute, robe de Rh, robe de cocktail.jpg" alt="">
+                    <img src="images/women/Designer-Mode online kaufen _ STYLEBOP.jpg" alt="">
+                    <img src="images/women/High Waist Light Blue Straight Leg Summer Pants.jpg" alt="">
+                    <img src="images/women/Tailor-made Ankara Cape Dress_ African Print Formal Dress - Etsy.jpg" alt="">
+                    <img src="images/women/بنطلون نسائي عريض الساق خصر عالٍ ، العبوة تحتوي على قطعتين.jpg" alt="">
+                    <img src="images/women/Buttoned Belted A-Line Midi Skirt in Orange.jpg" alt="">
+                    <img src="images/women/45587024-5ef3-4839-ad08-bb6ecf858c2f.jpg" alt="">
+                </div>
+                <h3>Blouses:</h3>
+                <div class="clothesGallery">
+                    <img src="images/women/90059–Blouse.jpg" alt="">
+                    <img src="images/women/CLOVERY Women's Basic Simple Short Sleeve Trendy Slim Fit Button Down Shirt.jpg" alt="">
+                    <img src="images/women/dbad7ae3-90ec-4fc5-af01-ced75cae40fe.jpg" alt="">
+                    <img src="images/women/ea943da2-c70b-4785-9069-85f0c575c071.jpg" alt="">
+                    <img src="images/women/IMG_20151123_224938.jpg" alt="">
+                    <img src="images/Leicht taillierter Schnitt_ Formgebende….jpg" alt="">
+                    <img src="images/women/Blouse Femke heeft een stijlvolle strikdetail bij….jpg" alt="">
+                    <img src="images/Made exclusively for Factory stores_ Point collar….jpg" alt="">
+
+                </div>
+                <h3>Kimonos:</h3>
+                <div class="clothesGallery">
+                    <img src="images/women/Kimono.jpg" alt="">
+                    <img src="images/women/African print long jacket styled with brown pants….jpg" alt="">
+                    <img src="images/women/8 Kimono Jackets We're Currently Obsessed With.jpg" alt="">
+                    <img src="images/women/6a633006-4b96-4d16-a2a9-c01a6093f966.jpg" alt="">
+                    <img src="images/women/stylish handmade Ankara top_jacket.jpg" alt="">
+                    <img src="images/Our dresses are made from high quality material….jpg" alt="">
+                    <img src="images/If you are looking for something a little….jpg" alt="">
+                    <img src="images/Current Ankara Styles_ 50 Mindblowing Ideas to….jpg" alt="">
+
+                </div>
+                <h3>Jumpsuits & palazos:</h3>
+                <div class="clothesGallery">
+                    <img src="images/women/Pink 1950s Sleeveless Buttoned Solid Jumpsuit - Green _ M.jpg" alt="">
+                    <img src="images/women/Damask Palazzo Pants.jpg" alt="">
+                    <img src="images/women/Alexis Fashion Collections For Women _ Moda Operandi.jpg" alt="">
+                    <img src="images/women/1940s V-Neck Striped Tie-Waist Sleeveless Jumpsuit - Khaki _ S.jpg" alt="">
+                    <img src="images/women/35e06ae3-0c2a-4d70-8c68-c2144616f2bb.jpg" alt="">
+                    <img src="images/women/1a5fd4d7-d7a0-4283-8c44-8e7186f55c90.jpg" alt="">
+                    <img src="images/women/1 Peça Casaco Elegante e Versátil de Ajuste Slim….jpg" alt="">
+                    <img src="images/women/Tribal Print Patchwork Belted Multi Color Long….jpg" alt="">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

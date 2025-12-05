@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Services</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* RESPONSIVE OTHER SERVICES PAGE */
+        @media (max-width:1100px) {
+            footer{height: 300px;}
+        }
+        @media (max-width: 900px) {
+            .containerOtherServices{width: 95%;}
+            p, fieldset{margin-right: 4rem;}
+            footer{height: 300px;}
+        }
+        @media (max-width: 600px) {
+                .logo{ position: absolute; width: 93%; height: 110px; top: 780px; left: 10%;
+                flex-direction: column;
+                align-items: center;
+            }
+            fieldset{margin-right: 4rem;}
+            .logo{display: none;}
+            footer{height: 300px;}
+        }
+        @media (max-width: 430px) {
+            .navBar ul{
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+            }
+            fieldset{margin-right: 4rem;}
+
+        }
+        @media (max-width: 290px) {
+                p,fieldset{scale: 90%;}
+                fieldset{margin-right: 2rem; margin-left: 0;}
+
+            }
+    </style>
+</head>
+<body>
+    <div class="navBar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="outfits.html">Outfits</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="otherServices.html">Other Services</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="containerOtherServices">
+        <h2>Other Services we offer</h2>
+        <p>
+            At <b>Charngo Fashion House,</b> we offer more than just tailoring services. We provide a range of additional services to enhance your experience with us:
+        </p>
+        <fieldset class="tail">
+            <legend><b>Tailoring & Design Services</b></legend>
+            <li><b>Custom Design Consultations:</b> Work with our expert designers to create unique outfits tailored to your style and preferences.</li>
+            <li><b>Alterations and Repairs:</b> We offer professional alteration and repair services to ensure your garments fit perfectly and look their best.</li>
+            <li><b>Material Sourcing:</b> We can help you find the perfect fabrics and materials for your projects, ensuring quality and style.</li>
+            <li><b>Style Recommendations:</b> Our team can provide personalized style advice to help you choose outfits that suit your body type and occasion.</li>
+            <li><b>Bulk Orders for Events:</b> Whether it's a wedding, corporate event, or special occasion, we can handle bulk orders with efficiency and care.</li>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>Tenders</b></legend>
+            We do tenders for:
+            <ul>
+                <li>Schools uniforms</li>
+                <li>Corporate wear</li>
+                <li>Event wear</li>
+                <li>Sports wear</li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend><b>Trainings</b></legend>
+            We offer training classes and workshops for people interested in learning 
+             and bettering their skills in fashion and design. Our programs are flexible and hands on.
+        </fieldset>
+
+        <fieldset>
+            <legend><b>Consultations</b></legend>
+            We offer personalized consultations to help you choose the best styles and 
+            designs that suit your needs and preferences.
+        </fieldset>
+        
+        <p>
+            For more information about our other services or to schedule a consultation, please contact us through our <a href="contactUs.html">Contact Us</a> page.
+        </p>
+    </div>
+    <footer>
+        <h2>Contact Us:</h2>
+        <li class="call">&nbsp;<b>Phone:</b> <span>&#9742;</span> <br> &nbsp;&nbsp;0720 587 958 <br> &nbsp;&nbsp;0738 459 045 </li>
+        <li class="whatsapp">&nbsp;<b>WhatsApp:</b> <span>&#128241;</span> <br> &nbsp;&nbsp;+2547 20 587 958</li>
+        <li class="email">&nbsp;<b>Email:</b> <span>&#128231;</span> <br> &nbsp;&nbsp;charngo.co@gmail.com</li>
+        <img src="images/WhatsApp Image 2025-11-28 at 12.37.31_823b162c.jpg" alt="" class="logo" style="position: relative; top: -210px; right: -90px;">
+
+    </footer>
+
+    <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

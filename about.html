@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* RESPONSIVE ABOUT PAGE */
+        @media (max-width: 900px) {
+            .tell{width: 98%; }
+            fieldset{margin-right: 4rem;}
+        }
+        @media (max-width: 600px) {
+            iframe{width: 300px; height: 200px;}
+            footer{height: 300px;}
+            fieldset{margin-right: 4rem;}
+            .logo{display: none;}
+        }
+        @media (max-width: 400px) {
+            iframe{width: 150px; height: 150px;}
+            .navBar ul{font-size: 12px;display: flex; flex-wrap: wrap; justify-content: center; flex-direction: column;}
+            fieldset{margin-right: 4rem;}
+
+        }
+        @media (max-width: 290px) {
+            iframe{width: 100px; height: 100px;}
+            p,fieldset{scale: 90%;}
+            fieldset{margin-right: 2rem; margin-left: 0;}
+
+        }
+    </style>
+</head>
+<body>
+    <div class="navBar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="outfits.html">Outfits</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="otherServices.html">Other Services</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="tell">
+        <fieldset class="who">
+            <legend><b>Who we are</b></legend>
+            <p>
+                <b>Charngo Fashion House</b> is tailoging and design company based and founded in Kenya by 
+                <a href="https://www.facebook.com/obiero.charles.494299">Charles Obiero</a>.
+                    We pride in prividing and delivering decent attire for all occasions and all walks of life.
+            </p>
+        </fieldset>
+        <fieldset class="where">
+            <legend><b>Where to find us</b></legend>
+            <p>
+                We are located in <a href="https://maps.app.goo.gl/tiaXvMNZ7fh1b4FS6">Umoja 2 market</a>, Nairobi Kenya and our service delivery is nationwide.
+            </p>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!3m2!1sen!2ske!4v1764317645085!5m2!1sen!2ske!6m8!1m7!1sQKjRPDaHHkXpgxf6OsFxIA!2m2!1d-1.277887293421165!2d36.89763121730611!3f243.67178900872682!4f4.451370577947216!5f0.7820865974627469" 
+                width="400" 
+                height="250" 
+                style="border:0; border-radius: 10px;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </fieldset>
+        <fieldset class="drive">
+            <legend><b>What is our drive</b></legend>
+            <p>
+                In a generation where fashion and trend is ever changing, we aspire to keep you in the loop with the latest designs
+                 and make you look good even whn you are on a budget.<br>
+                 We believe that decency, class and elegance is  not a far fetch reality, and with our skilled and experienced experts,
+                  we deliver as per your needs.
+            </p>
+
+        </fieldset>
+        <fieldset class="what">
+            <legend><b>What do we do</b></legend>
+            <p>
+                We design and tailor outfits for all occasions including but not limited to:
+                weddings, funerals, corporate events, casual wear, school uniforms among others.
+                We also offer fashion consultancy services to individuals and groups.<br>
+                We also do tenders for schools, corporates and many other institutions. We also do trainings for students and upcoming tailors.
+            </p>
+        </fieldset>
+        <fieldset class="How">
+            <legend><b>How long</b></legend>
+            <p>
+                <b>Charngo Fashion House</b> has builded its brand for over 25 years now, delivering quality and timely
+                services to our clients. With the years of experinence, we have builded trust and brought satisfaction to many 
+                clients and students who have interned with us. Our expert has mentored many and through apprenticeship,
+                their knowledge has developed into unmatched skills in the industry.
+            </p>
+        </fieldset>
+    </div>
+    <footer>
+        <h2>Contact Us:</h2>
+        <li class="call">&nbsp;<b>Phone:</b> <span>&#9742;</span> <br> &nbsp;&nbsp;0720 587 958 <br> &nbsp;&nbsp;0738 459 045 </li>
+        <li class="whatsapp">&nbsp;<b>WhatsApp:</b> <span>&#128241;</span> <br> &nbsp;&nbsp;+2547 20 587 958</li>
+        <li class="email">&nbsp;<b>Email:</b> <span>&#128231;</span> <br> &nbsp;&nbsp;charngo.co@gmail.com</li>
+        <img src="images/WhatsApp Image 2025-11-28 at 12.37.31_823b162c.jpg" alt="" class="logo" style="position: relative; top: -210px; right: -90px;">
+
+    </footer>
+
+    <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

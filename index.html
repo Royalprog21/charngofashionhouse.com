@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* INDEX PAGE RESPONSIVE */
+    @media (max-width: 1100px){
+        #hero-video{ height: 420px; }
+        .video-wrap{width: 95%;}
+        .banner img{ max-height: 380px; }
+        footer{width: 98%;}
+        .logo{ display: flex; position: relative;right: -120px; top: -200px;}
+    }
+
+    /* tablets / landscape phones */
+    @media (max-width: 900px){
+        header{ width: auto; position: relative; }
+        .banner img{ max-height: 380px; }
+        .logo{ position: relative; width: 175px; height: 175px; right: -120px; top: -200px;}
+        #hero-video{ height: 320px; }
+        .navBar li{ padding: 6px 8px; }
+        footer { padding: 1rem; width: 98%; }
+    }
+
+    /* small phones */
+    @media (max-width: 600px){
+        .banner img{ max-height: 200px; border-radius: 6px; }
+        .logo{ position: absolute; width: 100px; height: 100px; top: 780px; left: 100px;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+        .navBar ul{ gap: 6px; padding: 0 8px; display: flex; flex-wrap: wrap; flex-direction: column;}
+        .navBar li{ flex: none; text-align: center; width: 100%; }
+        #hero-video{ height: 220px; }
+        footer { margin: 1rem 0; width: calc(100% -25px); height: 650px;}
+        #backToTop { right: 0.6rem; bottom: 0.9rem; }
+    }
+
+    /* very small / narrow devices */
+    @media (max-width: 420px){
+        #hero-video{ height: 180px; }
+        .banner img{ max-height: 160px;  scale: 1; width: 97%;}
+        .logo{ position: relative;  margin: 8px auto 0; left: auto;  width: 120px; height: 120px; top: 60px;left: -20px;}
+        .navBar ul{ padding: 0; }
+        footer { padding: 0.75rem; font-size: 0.95rem; display: flex; flex-wrap:wrap; flex-direction: column;}
+        footer li{font-size: 0.85em;}
+    }
+    @media (max-width: 264px) {
+        .logo{position: relative;width: 60px; height: 60px; top: -0px;left: -10px;}
+        .navBar ul{ font-size: 12px; }
+
+    }
+
+    /* ensure no horizontal scroll from wide children */
+    *{ box-sizing: border-box; }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="images/banner image.png" alt="">
+    </div>
+
+    <div class="navBar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="outfits.html">Outfits</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="otherServices.html">Other Services</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="video-wrap">
+        <video      
+        id="hero-video"
+        controls
+        autoplay
+        muted
+        loop
+        playsinline
+        poster="images/video-poster.jpg">
+        <source src="images/Sewing%20time.mp4" type="video/mp4"></video>
+    </div>
+
+    <footer style="height: 300px;">
+        <h2>Contact Us:</h2>
+        <li class="call">&nbsp;<b>Phone:</b> <span>&#9742;</span> <br> &nbsp;&nbsp;0720 587 958 <br> &nbsp;&nbsp;0738 459 045 </li>
+        <li class="whatsapp">&nbsp;<b>WhatsApp:</b> <span>&#128241;</span> <br> &nbsp;&nbsp;+2547 20 587 958</li>
+        <li class="email">&nbsp;<b>Email:</b> <span>&#128231;</span> <br> &nbsp;&nbsp;charngo.co@gmail.com</li>
+        <img src="images/WhatsApp Image 2025-11-28 at 12.37.31_823b162c.jpg" alt="" class="logo" >
+
+    </footer>
+
+    <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

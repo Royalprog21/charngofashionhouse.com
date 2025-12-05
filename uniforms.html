@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniforms</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* RESPONSIVE DESIGN */
+@media (max-width: 1100px) {
+    .container{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    .container p{
+        position: inherit;
+        width: 95%;
+    }
+    .insider{
+        position: relative;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .insider .clothesGallery{
+        position: relative;
+        width: 100%;
+    }
+    .insider .clothesGallery img{
+        width: 200px;
+        height: 240px;
+    }
+    header img{
+        scale: 0.9;
+    }
+    header h2{
+        scale: 0.6;
+    }
+}
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+    
+    .leftSide {
+        position: fixed;
+        width: 280px;
+        height: 100vh;
+        left: -280px;
+        top: 0;
+        background-color: rgb(243, 228, 206);
+        transition: left 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+        box-shadow: 4px 0 12px rgba(0,0,0,0.3);
+    }
+    
+    .leftSide.active {
+        left: 0;
+    }
+    
+    .rightSide {
+        position: relative;
+        width: 100%;
+        right: 0;
+        margin-left: 0;
+    }
+    
+    header {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        padding: 20px 10px;
+    }
+    
+    header img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        height: 100px;
+        width: 100px;
+    }
+    
+    header h2 {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .navBarOutfits {
+        position: relative;
+        width: 100%;
+        right: 0;
+        top: 0;
+        margin-top: 60px;
+    }
+    
+    .navBarOutfits ul {
+        flex-wrap: wrap;
+        padding: 0 5px;
+    }
+    
+    .navBarOutfits li {
+        padding: 10px 5px;
+        font-size: 13px;
+        min-width: 80px;
+    }
+    
+    .showOptions {
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .showOptions ul {
+        padding: 0;
+    }
+    
+    .showOptions li {
+        padding: 18px;
+        font-size: 15px;
+    }
+    
+    .container {
+        width: 95%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+    
+    .insider {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .insider .clothesGallery img{
+        width: 160px;
+        height: 200px;
+    }
+    
+    footer {
+        width: 95%;
+        margin: 2rem auto 1rem auto;
+    }
+}
+@media (max-width: 480px) {
+    .burger-menu {
+        width: 40px;
+        height: 40px;
+        top: 12px;
+        left: 12px;
+    }
+    
+    .burger-menu span {
+        width: 22px;
+        height: 2.5px;
+    }
+    
+    .leftSide {
+        width: 250px;
+        left: -250px;
+    }
+    
+    header img {
+        height: 80px;
+        width: 80px;
+    }
+    
+    header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .navBarOutfits {
+        margin-top: 55px;
+    }
+    .navBarOutfits ul{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    
+    .navBarOutfits li {
+        padding: 8px 3px;
+        font-size: 11px;
+        min-width: 70px;
+    }
+    
+    .showOptions li {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .container {
+        width: 98%;
+    }
+    
+    .container p {
+        font-size: 13px;
+        padding: 0 8px;
+    }
+    
+    .insider .clothesGallery {
+        width: 100%;
+        gap: 0.4em;
+    }
+    
+    .insider img {
+        width: calc(50% - 8px);
+        height: auto;
+        min-height: 130px;
+    }
+    
+    footer {
+        padding: 1rem 0.8rem;
+    }
+    
+    footer h2 {
+        font-size: 1rem;
+    }
+    
+    footer li {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 281px) {
+    .insider{
+        position: relative;
+        top: 20%;
+        width: 100%;
+        left: -100%;
+    }
+    .insider .clothesGallery {
+        width: 100%;
+        gap: 0.4em;
+    }
+    .insider .clothesGallery img{
+        width: 60px;
+        height: 80px;
+    }
+}
+
+@media (min-width: 769px) {
+    .overlay {
+        display: none !important;
+    }
+}
+    </style>
+</head>
+<body>
+    <button class="burger-menu" id="burgerMenu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <div class="leftSide">
+        <header>
+            <img src="images/uniforms/Catholic Grade School Uniform.jpg" alt="">
+            <h2>Uniforms</h2>
+        </header>
+
+        <div class="showOptions">
+            <ul>
+                <a href="uniforms.html"><li>Uniforms</li></a>
+                <a href="mensWare.html"><li>Men's Ware</li></a>
+                <a href="womensWare.html"><li>Women's Ware</li></a>
+                <a href="childrenWare.html"><li>Children's Ware</li></a>
+                <a href="churchWare.html"><li>Church Ware</li></a>
+                <a href="sportsWare.html"><li>Sports Ware</li></a>
+                <a href="eventWare.html"><li>Event Ware</li></a>
+                <a href="accessories.html"><li>Accessories</li></a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="rightSide">
+        <div class="navBarOutfits">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="outfits.html">Outfits</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="otherServices.html">Other Services</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <p>
+                Nothing boosts confidence like a well-fitted uniform, decent,
+                comfortable and classy. At <b>Charngo Fashion House</b>, we offer a variety of
+                uniform designs for schools, corporates, and other institutions.
+            </p>
+            <div class="insider">
+                <h3>School uniforms: </h3><br>
+                <div class="clothesGallery">
+                    <img src="images/uniforms/Catholic Grade School Uniform.jpg" alt="">
+                    <img src="images/uniforms/KoleGoe Matilda Cosplay Costume Uniform Set Skirt Shirt Tie Halloween Carnival Set.jpg" alt="">
+                    <img src="images/children/Eco-Friendly School Uniform Solutions.jpg" alt="">
+                    <img src="images/children/child uniform.jpg" alt="">
+                    <img src="images/uniforms/IMG_20220430_123336_288.jpg" alt="">
+                    <img src="images/uniforms/59f9ed95-1088-4a5e-a142-1e52f4108894.jpg" alt="">
+                    <img src="images/uniforms/0df643e7-e6bb-4116-9144-dfe72c7a6d50.jpg" alt="">
+                    <img src="images/uniforms/V-front jumper.jpg" alt="">
+                </div>
+                <h3>Security uniforms</h3><br>
+                <div class="clothesGallery">
+                    <img src="images/uniforms/European shirt and pants police uniform.jpg" alt="">
+                    <img src="images/uniforms/Hits Style Security Shirts in Big and Tall Sizes 6 Colors up to 6XT FREE SHIPPING 2025.jpg" alt="">
+                    <img src="images/uniforms/Just Uniforms.jpg" alt="">
+                    <img src="images/uniforms/No_1 Security Guard Uniforms Manufacturer _ Oasis Uniform.jpg" alt="">
+                    <img src="images/uniforms/Just Uniforms is the best company to buy security….jpg" alt="">
+                    <img src="images/uniforms/Security Uniforms.jpg" alt="">
+                    <img src="images/uniforms/Four Types Of Security Guard Uniforms Aligned With Their Industries!.jpg" alt="">
+                    <img src="images/uniforms/Corporate Security Uniform's Shirt And Pant Wholesaler & Supplier.jpg" alt="">
+                </div>
+                <h3>Medical uniforms:</h3><br>
+                <div class="clothesGallery">
+                    <img src="images/uniforms/4d20d662-22b0-40c4-978a-f757e4738364.jpg" alt="">
+                    <img src="images/uniforms/Dagacci Scrubs Medical Uniform Women and Man Scrubs Set Medical Scrubs Top and Pants.jpg" alt="">
+                    <img src="images/uniforms/High Quality Unisex Poly Cotton Hospital White Lab Coats Custom Packing Fashionable Scrubs Nurse Doctor Uniform - Buy Unisex Hospital Uniform Poly Cotton Doctor Nurse White Lab Coat Hospital Coat Full Length Full Sl.jpg" alt="">
+                    <img src="images/uniforms/Orbit International Classic Tunic_ Ladies - Bottle.jpg" alt="">
+                    <img src="images/uniforms/Traditional Nurses Tunic with Contemporary Cut - Pale Blue - White _ 8.jpg" alt="">
+                    <img src="images/uniforms/duxyoz Medical Scrub Tops for Women UK V Neck Nurses Tunics Private Health Care Hospital Work Wear Short Sleeve Blouse Clinic Carer Utility Uniform.jpg" alt="">
+                    <img src="images/uniforms/Adar Universal Unisex Scrubs - Unisex Drawstring Scrub Set.jpg" alt="">
+                    <img src="images/uniforms/_ScrubHaven_ Where Comfort Meets Style!_.jpg" alt="">
+                </div>
+                <h3>Chef & Other uniforms:</h3><br>
+                <div class="clothesGallery">
+                    <img src="images/uniforms/Zaro india Corporate T-Shirts, Corporate Logo T-Shirts, Custom Business T-Shirts, Cotton Tshirt.jpg" alt="">
+                    <img src="images/uniforms/f7b12d36-a475-4b9d-b85e-a2805f1e438d.jpg" alt="">
+                    <img src="images/uniforms/Be egg-cited.jpg" alt="">
+                    <img src="images/uniforms/Aprons For Women And Men, Kitchen Chef Apron With 3 Pockets And 1 Pcs Black1.jpg" alt="">
+                    <img src="images/uniforms/A woman in a white uniform holding a pan with a black pan on it _ Premium AI-generated image.jpg" alt="">
+                    <img src="images/uniforms/white robe.jpg" alt="">
+                </div>
+                
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
